@@ -2,12 +2,10 @@ import chalk from 'chalk';
 
 import randomColor from 'randomcolor';
 
-import argv from 'node:process';
-
 function generateRandomColor() {
   const color = randomColor({
-    luminosity: argv[0],
-    hue: argv[1],
+    luminosity: process.argv[3],
+    hue: process.argv[2],
   });
 
   console.log(
